@@ -1,4 +1,6 @@
 /* ------- Fonts ------- */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Raleway&display=swap");
+
 @font-face {
   font-family: primary-font;
   src: url(../fonts/MontserratAlternates.ttf);
@@ -9,56 +11,136 @@
   src: url(../fonts/Raleway.ttf);
 }
 
+/* ------- Universal Classes ------- */
+html {
+  scroll-behavior: smooth !important;
+}
+
+.my-primary-bg {
+  background-color: #4b4b4b !important;
+}
+
+.my-btn-primary {
+  text-decoration: none !important;
+  background: #ffaf40 !important;
+  color: #4b4b4b !important;
+  padding: 8px 20px 5px 20px !important;
+  font-weight: 500 !important;
+  /* border-radius: 0 !important; */
+  box-shadow: 0px 5px 0px 0px #a76f21 !important;
+  border: none !important;
+}
+
+.my-btn-primary:hover {
+  background: #ffaf40ee !important;
+}
+
+.card-overlay {
+  background: #00000030 !important;
+}
+
 /* ------- Navigation style ------- */
 
 .navbar {
-  /* height: 10vh !important; */
-  background: #4b4b4b !important;
+  background: #ffaf40 !important;
 }
 
 .navbar-brand {
   font-family: secondary-font;
 }
-
 .nav-link {
   position: relative !important;
+  color: #4b4b4b !important;
+  margin-left: 5px !important;
+  font-weight: 500 !important;
 }
 
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.active {
   color: #ffffff !important;
 }
 
-.nav-link:hover::before,
-.nav-link:focus::before,
-.active::before {
-  visibility: visible !important;
-  transform-origin: left !important;
-  transform: scaleX(1) !important;
+@media (min-width: 992px) {
+  .nav-link:hover::before,
+  .nav-link:focus::before,
+  .active::before {
+    visibility: visible !important;
+    transform-origin: left !important;
+    transform: scaleX(1) !important;
+  }
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in;
+    background-color: #ffffff;
+  }
 }
 
-.nav-link::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in;
-  background-color: #ffffff;
+.navbar-link {
+  text-decoration: none !important;
+  color: #4b4b4b !important;
+  transition: all 0.3s;
+  font-weight: 500 !important;
+}
+
+.navbar-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-link:hover .my-badge {
+  background-color: #ffffff !important;
+  color: #4b4b4b !important;
+  transition: all 0.3s;
+}
+
+.fa-shopping-cart {
+  position: relative !important;
+  font-size: 18px !important;
+}
+
+.my-badge {
+  position: absolute !important;
+  background-color: #4b4b4b !important;
+  color: #ffffff !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 50% !important;
+  line-height: 18px !important;
+  font-size: 12px !important;
+  top: -12px;
+  right: -10px;
+  text-align: center !important;
+}
+
+.fa-user-circle {
+  font-size: 24px;
 }
 
 /* ------- Section 1 style ------- */
 
 .front-section {
-  background: #4b4b4b !important;
-  /* height: 90vh !important; */
-  width: 100% !important;
+  height: 92vh !important;
+  background-image: url("../images/view-of-flying-drone-2218141.jpg");
+  background-position: center;
 }
 
-.front-section .punch-line span {
-  font-family: primary-font !important;
-  font-weight: 900;
+.slide-down-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  color: #ffffff;
+  font-size: 32px;
+  transform: translateX(-50%);
+}
+
+.slide-down-arrow:hover {
+  color: #d3d3d3 !important;
 }

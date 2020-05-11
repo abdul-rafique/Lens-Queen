@@ -12,17 +12,31 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/custom.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/animate.css" />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/8ce2b457e0.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav
-      class="navbar sticky-top navbar-expand-lg navbar-dark"
-      style="height: 10vh;"
-    >
-      <a href="#" class="navbar-brand mr-auto">Logo</a>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <a href="#" class="navbar-brand font-weight-bold mr-auto">Lens Queen</a>
+      <a href="#" class="navbar-link order-lg-2 mr-3">
+        <i class="fas fa-shopping-cart align-middle">
+          <span class="my-badge">0</span>
+        </i>
+        <span class="align-middle">Cart</span>
+      </a>
+      <a href="#" class="navbar-link order-lg-2 mr-3">
+        <i class="fas fa-user-circle align-middle"></i>
+        <span class="align-middle">Log In</span>
+      </a>
+
       <button
         type="button"
         class="navbar-toggler"
@@ -31,65 +45,88 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse" id="#navbarCollapse">
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link active mr-2">Home</a>
+            <a href="#" class="nav-link">All Products</a>
           </li>
-          <li class="nav-item">
-            <div class="dropdown">
-              <a
-                href="#"
-                class="nav-link mr-2 dropdown-toggle"
-                id="dropdownOne"
-                data-toggle="dropdown"
-              >
-                Products
-              </a>
-
-              <div class="dropdown-menu" aria-labelledby="dropdownOne">
-                <a href="#" class="dropdown-item">Product 1</a>
-                <a href="#" class="dropdown-item">Product 2</a>
-                <a href="#" class="dropdown-item">Product 3</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link mr-2">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link mr-2">About Us</a>
-          </li>
+          <li class="nav-item"><a href="#" class="nav-link">Drones</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Cameras</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Sale</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
+
     <div class="container-fluid p-0">
-      <div class="jumbotron front-section rounded-0 mb-0" style="height: 90vh;">
-        <div class="row p-0">
-          <div class="col-md-6 d-flex align-items-center">
-            <h1
-              class="display-3 text-light punch-line animated flipInX delay-1s"
+      <div class="row m-0">
+        <div class="col p-0">
+          <div class="card front-section border-0">
+            <div
+              class="card-body card-overlay d-flex align-items-center justify-content-center text-light word-wrap"
             >
-              Explore beauty with <span><u>Eagle's</u></span> eye.
-            </h1>
-          </div>
-          <div class="col-md-6">
-            <img
-              class="w-100 animated zoomIn delay-1s"
-              src="./images/PNGPIX-COM-Drone-PNG-Transparent-Image.png"
-              alt="camera-drone"
-            />
+              <div class="text-center">
+                <h1 class="display-3 text-center mb-5">
+                  Explore the world like a pro!
+                </h1>
+                <a href="#" type="button" class="btn my-btn-primary"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+
+            <a href="#section2" class="slide-down-arrow">
+              <i
+                class="fas fa-arrow-down animated slideInDown infinite delay-1s"
+              ></i>
+            </a>
           </div>
         </div>
-        <a class="position-absolute" href="#">
-          <img src="icons/arrow-down.svg" alt="" />
-        </a>
       </div>
 
       <div class="row m-0">
-        <div class="col">
-          <h2 class="text-center my-5"></h2>
+        <div class="col-md-6 p-0">
+          <div class="card border-0 rounded-0" id="section2">
+            <img
+              src="./images/black-sony-dslr-camera-on-green-grass-in-front-of-brown-and-225157 (3).jpg"
+              alt=""
+              class="card-img rounded-0"
+            />
+            <div
+              class="card-img-overlay card-overlay text-light text-center d-flex align-items-center justify-content-center"
+            >
+              <div>
+                <h3 class="display-4">Thermal Camera Collection</h3>
+
+                <a href="#" type="button" class="btn my-btn-primary"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="card border-0 rounded-0">
+            <img
+              src="./images/drone-knoll-flatlay--1-.jpg"
+              alt=""
+              class="card-img rounded-0"
+            />
+            <div
+              class="card-img-overlay card-overlay text-light text-center d-flex justify-content-center align-items-center"
+            >
+              <div>
+                <h1 class="display-4">Essential Drone Accessories</h1>
+
+                <a href="#" type="button" class="btn my-btn-primary"
+                  >Shop Now</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
