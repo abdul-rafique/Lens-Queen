@@ -12,10 +12,15 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/custom.css" />
-    <!-- Custom CSS -->
+    <!-- Animate CSS -->
     <link rel="stylesheet" href="./css/animate.css" />
     <!-- Font Awesome -->
     <script
@@ -25,18 +30,30 @@
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+      <!-- Brand Name -->
       <a href="#" class="navbar-brand font-weight-bold mr-auto">Lens Queen</a>
-      <a href="#" class="navbar-link order-lg-2 mr-3">
-        <i class="fas fa-shopping-cart align-middle">
-          <span class="my-badge">0</span>
-        </i>
-        <span class="align-middle">Cart</span>
-      </a>
-      <a href="#" class="navbar-link order-lg-2 mr-3">
+
+      <!-- Shopping Cart -->
+      <div class="dropdown order-lg-2 mr-3">
+        <a href="#" class="navbar-link" data-toggle="dropdown">
+          <i class="fas fa-shopping-cart align-middle">
+            <span class="my-badge">0</span>
+          </i>
+          <span class="align-middle">Cart</span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-lg-right">
+          <span class="dropdown-item">Item</span>
+        </div>
+      </div>
+
+      <!-- User Login -->
+      <a href="#" class="navbar-link order-lg-2 mr-2">
         <i class="fas fa-user-circle align-middle"></i>
         <span class="align-middle">Log In</span>
       </a>
 
+      <!-- Navbar Toggler -->
       <button
         type="button"
         class="navbar-toggler"
@@ -45,23 +62,40 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav ml-auto mr-5">
+        <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link">All Products</a>
+            <a href="./pages/all-products.html" class="nav-link"
+              >All Products</a
+            >
           </li>
-          <li class="nav-item"><a href="#" class="nav-link">Drones</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Cameras</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Accessories</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Sale</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item">
+            <a href="./pages/drones.html" class="nav-link">Drones</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/cameras.html" class="nav-link">Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/accessories.html" class="nav-link">Accessories</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/sale.html" class="nav-link">Sale</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="./pages/contact.html" class="nav-link">Contact</a>
+          </li>
         </ul>
       </div>
     </nav>
 
     <div class="container-fluid p-0">
+      <!-- Cover Section -->
       <div class="row m-0">
         <div class="col p-0">
           <div class="card front-section border-0">
@@ -87,16 +121,17 @@
         </div>
       </div>
 
-      <div class="row m-0">
+      <!-- Section  -->
+      <div class="row m-0" id="section2">
         <div class="col-md-6 p-0">
-          <div class="card border-0 rounded-0" id="section2">
+          <div class="card border-0 rounded-0">
             <img
-              src="./images/black-sony-dslr-camera-on-green-grass-in-front-of-brown-and-225157 (3).jpg"
+              src="./images/sony-camera.jpg"
               alt=""
               class="card-img rounded-0"
             />
             <div
-              class="card-img-overlay card-overlay text-light text-center d-flex align-items-center justify-content-center"
+              class="card-img-overlay card-overlay text-light text-center d-flex flex-column align-items-center justify-content-center"
             >
               <div>
                 <h3 class="display-4">Thermal Camera Collection</h3>
@@ -111,12 +146,12 @@
         <div class="col-md-6 p-0">
           <div class="card border-0 rounded-0">
             <img
-              src="./images/drone-knoll-flatlay--1-.jpg"
+              src="./images/drone-accessories.jpg"
               alt=""
               class="card-img rounded-0"
             />
             <div
-              class="card-img-overlay card-overlay text-light text-center d-flex justify-content-center align-items-center"
+              class="card-img-overlay card-overlay text-light text-center d-inline-flex justify-content-center align-items-center"
             >
               <div>
                 <h1 class="display-4">Essential Drone Accessories</h1>
@@ -125,6 +160,726 @@
                   >Shop Now</a
                 >
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col p-0">
+          <div class="card border-0 rounded-0">
+            <div class="card-body pb-0">
+              <h2 class="text-center mb-4 title">Our Best Sellers</h2>
+              <div
+                id="bestSellerItems"
+                class="owl-carousel items-carousel pl-4 pr-4"
+              >
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-1.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-2.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-3.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-4.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-5.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-6.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-7.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-8.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="bestSellerItemsPrev" class="carousel-nav carousel-prev">
+                <i class="fas fa-angle-left"></i>
+              </div>
+              <div id="bestSellerItemsNext" class="carousel-nav carousel-next">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col p-0">
+          <div class="card border-0 rounded-0">
+            <div class="card-body pb-0">
+              <h2 class="text-center mb-4 title">New Arrivals</h2>
+              <div
+                id="newArrivalItems"
+                class="owl-carousel items-carousel pl-4 pr-4"
+              >
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-1.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-2.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-3.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-4.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-5.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-6.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-7.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <div class="item card">
+                  <img
+                    src="./images/drone-item-8.jpg"
+                    alt=""
+                    class="card-img-top"
+                  />
+                  <div class="card-body">
+                    <h4>I am a product</h4>
+                    <h5>$ 200</h5>
+                    <span class="d-block">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i><br />
+                      <i>Reviews</i>
+                    </span>
+                    <button
+                      type="button"
+                      class="btn btn-block my-btn-primary mt-3"
+                    >
+                      <i class="fas fa-cart-plus"></i>
+                      Add to Cart
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div id="newArrivalItemsPrev" class="carousel-nav carousel-prev">
+                <i class="fas fa-angle-left"></i>
+              </div>
+              <div id="newArrivalItemsNext" class="carousel-nav carousel-next">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col p-3">
+          <div class="card border-0">
+            <div class="card-body">
+              <h5 class="text-center text-primary mb-4">Top Brands</h5>
+
+              <div id="brandsCarousel" class="owl-carousel brands-carousel">
+                <img
+                  class="item"
+                  src="./images/canon-brand-logo1.png"
+                  alt="Canon"
+                />
+                <img
+                  src="./images/nikon-brand-logo1.png"
+                  alt="Sony"
+                  class="item"
+                />
+                <img
+                  src="./images/panasonic-brand-logo1.png"
+                  alt="Sony"
+                  class="item"
+                />
+                <img
+                  class="item"
+                  src="./images/canon-brand-logo1.png"
+                  alt="Canon"
+                />
+                <img
+                  src="./images/nikon-brand-logo1.png"
+                  alt="Sony"
+                  class="item"
+                />
+                <img
+                  src="./images/panasonic-brand-logo1.png"
+                  alt="Sony"
+                  class="item"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0 bg-primary">
+        <div class="col my-secondary-bg">
+          <div class="card bg-none border-0">
+            <div class="card-body">
+              <h2 class="text-center text-light">Testimonial</h2>
+              <div id="testimonial" class="owl-carousel pl-4 pr-4">
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Danial
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Luther
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Sony
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Canon
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Sigma
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="item card bg-none text-center border-0">
+                  <div class="card-body">
+                    <i class="fas fa-quote-right"></i>
+                    <blockquote class="blockquote my-3 text-light text-left">
+                      <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus quaerat voluptatem tenetur distinctio!
+                      </p>
+                      <footer class="blockquote-footer text-light">
+                        Samiul
+                      </footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div id="testimonialPrev" class="carousel-nav carousel-prev">
+                <i class="fas fa-angle-left"></i>
+              </div>
+              <div id="testimonialNext" class="carousel-nav carousel-next">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="row m-0 footer-nav bg-gray">
+        <div class="col-12 col-md-6 col-lg-3 order-2 order-md-1">
+          <div class="card border-0 bg-none text-yellow">
+            <div class="card-body">
+              <h3>Lens Queen</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2 order-md-2">
+          <div class="card border-0 bg-none text-yellow">
+            <div class="card-body">
+              <h5>Shop</h5>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="./pages/drones.html" class="nav-link">Drones</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/cameras.html" class="nav-link">Cameras</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/accessories.html" class="nav-link"
+                    >Accessories</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/sale.html" class="nav-link">Sale</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2 order-md-3">
+          <div class="card border-0 bg-none text-yellow">
+            <div class="card-body">
+              <h5>Info</h5>
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="./pages/contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a href="./pages/about.html" class="nav-link">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-2 order-md-3">
+          <div class="card border-0 bg-none text-yellow">
+            <div class="card-body">
+              <h5>Support</h5>
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Shipping & Returns</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Store Policy</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Payment Methods</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 order-md-4">
+          <div class="card border-0 bg-none text-yellow">
+            <div class="card-body">
+              <h5>Contact</h5>
+              <ul class="navbar-nav">
+                <li class="nav-item nav-link">Customer Service:</li>
+                <li class="nav-item">
+                  <span class="nav-link">
+                    (021)-5555-123
+                  </span>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">info@domain.com</a>
+                </li>
+                <li class="nav-item mt-2">
+                  <a href="https://web.facebook.com/" class="social-link"
+                    ><i class="fab fa-facebook"></i
+                  ></a>
+                  <a href="https://twitter.com/" class="social-link ml-2"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a href="https://youtube.com/" class="social-link ml-2"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row m-0">
+        <div class="col bg-yellow">
+          <div class="card bg-none border-0 text-center">
+            <div class="card-body pb-0">
+              <p>
+                &copy; Copyright 2020. Created with
+                <i class="fas fa-heart" style="color: #e31b23;"></i> by
+                <a href="#" class="nav-link d-inline p-0"
+                  ><i>Abdul Rafique</i></a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -149,5 +904,114 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- Owl Carousel JS -->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <script>
+      var owl = $(".items-carousel");
+      owl.owlCarousel({
+        margin: 20,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        rewind: true,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          576: {
+            items: 2,
+          },
+          768: {
+            items: 3,
+          },
+          991: {
+            items: 4,
+          },
+          1200: {
+            items: 5,
+          },
+        },
+      });
+
+      var bestSellerItemsCarousel = $("#bestSellerItems");
+      var newArrivalItemsCarousel = $("#newArrivalItems");
+
+      $("#bestSellerItemsPrev").click(function () {
+        bestSellerItemsCarousel.trigger("prev.owl.carousel");
+      });
+
+      $("#bestSellerItemsNext").click(function () {
+        bestSellerItemsCarousel.trigger("next.owl.carousel");
+      });
+
+      $("#newArrivalItemsPrev").click(function () {
+        newArrivalItemsCarousel.trigger("prev.owl.carousel");
+      });
+
+      $("#newArrivalItemsNext").click(function () {
+        newArrivalItemsCarousel.trigger("next.owl.carousel");
+      });
+
+      var brandsCarousel = $("#brandsCarousel");
+
+      brandsCarousel.owlCarousel({
+        loop: true,
+        margin: 10,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplaySpeed: 3000,
+        slideTransition: "linear",
+        responsive: {
+          0: {
+            items: 2,
+          },
+          576: {
+            items: 4,
+          },
+          768: {
+            items: 6,
+          },
+          991: {
+            items: 8,
+          },
+          1200: {
+            items: 10,
+          },
+        },
+      });
+
+      var testimonial = $("#testimonial");
+
+      testimonial.owlCarousel({
+        rewind: true,
+        margin: 10,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          576: {
+            items: 1,
+          },
+          768: {
+            items: 2,
+          },
+          991: {
+            items: 3,
+          },
+          1200: {
+            items: 3,
+          },
+        },
+      });
+
+      $("#testimonialPrev").click(function () {
+        testimonial.trigger("prev.owl.carousel");
+      });
+
+      $("#testimonialNext").click(function () {
+        testimonial.trigger("next.owl.carousel");
+      });
+    </script>
   </body>
 </html>

@@ -1,23 +1,28 @@
-/* ------- Fonts ------- */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Raleway&display=swap");
-
-@font-face {
-  font-family: primary-font;
-  src: url(../fonts/MontserratAlternates.ttf);
-}
-
-@font-face {
-  font-family: secondary-font;
-  src: url(../fonts/Raleway.ttf);
-}
 
 /* ------- Universal Classes ------- */
 html {
   scroll-behavior: smooth !important;
 }
 
-.my-primary-bg {
+.bg-none {
+  background: none !important;
+}
+
+.bg-yellow {
+  background-color: #ffaf40 !important;
+}
+
+.bg-dark {
   background-color: #4b4b4b !important;
+}
+
+.bg-gray {
+  background-color: #dee3e2 !important;
+}
+
+.text-yellow {
+  color: #ffaf40 !important;
 }
 
 .my-btn-primary {
@@ -26,9 +31,9 @@ html {
   color: #4b4b4b !important;
   padding: 8px 20px 5px 20px !important;
   font-weight: 500 !important;
-  /* border-radius: 0 !important; */
   box-shadow: 0px 5px 0px 0px #a76f21 !important;
   border: none !important;
+  font-family: "Montserrat Alternates", sans-serif !important;
 }
 
 .my-btn-primary:hover {
@@ -37,6 +42,19 @@ html {
 
 .card-overlay {
   background: #00000030 !important;
+  font-family: "Montserrat Alternates", sans-serif !important;
+}
+
+.title {
+  color: #4b4b4b !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  font-family: "Raleway", sans-serif;
+}
+
+.fa-star,
+.fa-star-half-alt {
+  color: #fcd600 !important;
 }
 
 /* ------- Navigation style ------- */
@@ -46,31 +64,31 @@ html {
 }
 
 .navbar-brand {
-  font-family: secondary-font;
+  font-family: "Montserrat Alternates", sans-serif !important;
 }
-.nav-link {
+.navbar-collapse .nav-link {
   position: relative !important;
   color: #4b4b4b !important;
   margin-left: 5px !important;
-  font-weight: 500 !important;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.active {
+.navbar-collapse .nav-link:hover,
+.navbar-collapse .nav-link:focus,
+.navbar-collapse .active {
   color: #ffffff !important;
 }
 
 @media (min-width: 992px) {
-  .nav-link:hover::before,
-  .nav-link:focus::before,
-  .active::before {
+  .navbar-collapse .nav-link:hover::before,
+  .navbar-collapse .nav-link:focus::before,
+  .navbar-collapse .active::before {
     visibility: visible !important;
     transform-origin: left !important;
     transform: scaleX(1) !important;
   }
 
-  .nav-link::before {
+  .navbar-collapse .nav-link::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -88,7 +106,7 @@ html {
   text-decoration: none !important;
   color: #4b4b4b !important;
   transition: all 0.3s;
-  font-weight: 500 !important;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .navbar-link:hover {
@@ -104,6 +122,7 @@ html {
 .fa-shopping-cart {
   position: relative !important;
   font-size: 18px !important;
+  font-family: secondary-font;
 }
 
 .my-badge {
@@ -118,6 +137,7 @@ html {
   top: -12px;
   right: -10px;
   text-align: center !important;
+  font-family: "Montserrat Alternates", sans-serif !important;
 }
 
 .fa-user-circle {
@@ -128,7 +148,7 @@ html {
 
 .front-section {
   height: 92vh !important;
-  background-image: url("../images/view-of-flying-drone-2218141.jpg");
+  background-image: url("../images/drone.jpg");
   background-position: center;
 }
 
@@ -143,4 +163,157 @@ html {
 
 .slide-down-arrow:hover {
   color: #d3d3d3 !important;
+}
+
+/*  */
+
+.owl-carousel {
+  position: unset !important;
+}
+
+.owl-carousel .card-body {
+  color: #4b4b4b !important;
+  text-align: center !important;
+}
+
+.carousel-nav {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  -webkit-transform: translateY(-50%) !important;
+  -moz-transform: translateY(-50%) !important;
+  -ms-transform: translateY(-50%) !important;
+  -o-transform: translateY(-50%) !important;
+  cursor: pointer !important;
+  padding: 5px !important;
+}
+
+.carousel-nav i {
+  color: #7a7a7a;
+  transition: all 0.3s ease;
+  font-size: 24px;
+}
+
+.carousel-nav:hover i {
+  color: #222222;
+}
+
+.carousel-prev {
+  left: 20px;
+}
+
+.carousel-next {
+  right: 20px;
+}
+
+#testimonial .fas {
+  color: #f3f3f3;
+}
+
+#testimonial .card {
+  border: 1px solid #f3f3f3;
+}
+
+#testimonial + .carousel-nav i,
+#testimonial + .carousel-nav + .carousel-nav i {
+  color: #d3d3d3;
+  transition: all 0.3s ease;
+}
+
+#testimonial + .carousel-nav:hover i,
+#testimonial + .carousel-nav + .carousel-nav:hover i {
+  color: #f3f3f3;
+}
+
+.footer-nav .navbar-nav .nav-item,
+.footer-nav .navbar-nav .nav-link {
+  color: #4b4b4b !important;
+  display: inline-block !important;
+}
+
+.footer-nav .navbar-nav > .nav-item > .nav-link:hover {
+  color: #000000 !important;
+  /* font-weight: 600 !important; */
+  transition: all 0.3s ease-in-out !important;
+  text-shadow: 0px 0px 5px #ff9a0c !important ;
+}
+
+.footer-nav .navbar-nav .social-link .fab {
+  font-size: 24px;
+  color: #4b4b4b;
+}
+
+.footer-nav .navbar-nav .social-link .fa-facebook:hover {
+  color: #3b5998 !important;
+}
+
+.footer-nav .navbar-nav .social-link .fa-twitter:hover {
+  color: #08a0e9 !important;
+}
+
+.footer-nav .navbar-nav .social-link .fa-youtube:hover {
+  color: #e62117 !important;
+}
+
+/* ---- All Products Page ---- */
+
+.filter-section .accordion .btn {
+  position: relative !important;
+}
+
+.filter-section .accordion .btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.filter-section .accordion .card .card-body .navbar-nav .nav-item .nav-link {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.filter-section .fas {
+  position: absolute !important;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 0px) {
+  .display-3 {
+    font-size: 32px !important;
+  }
+
+  .display-4 {
+    font-size: 24px !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .display-3 {
+    font-size: 46px !important;
+  }
+
+  .display-4 {
+    font-size: 32px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .display-3 {
+    font-size: 52px !important;
+  }
+
+  .display-4 {
+    font-size: 38px !important;
+  }
+}
+
+@media (min-width: 991px) {
+  .display-3 {
+    font-size: 64px !important;
+  }
+
+  .display-4 {
+    font-size: 44px !important;
+  }
 }
