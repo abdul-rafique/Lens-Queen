@@ -29,11 +29,12 @@
     ></script>
   </head>
   <body>
+    <!-- Navbar Start -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <!-- Brand Name -->
       <a href="#" class="navbar-brand font-weight-bold mr-auto">Lens Queen</a>
 
-      <!-- Shopping Cart -->
+      <!-- Shopping Cart  -->
       <div class="dropdown order-lg-2 mr-3">
         <a href="#" class="navbar-link" data-toggle="dropdown">
           <i class="fas fa-shopping-cart align-middle">
@@ -47,8 +48,13 @@
         </div>
       </div>
 
-      <!-- User Login -->
-      <a href="#" class="navbar-link order-lg-2 mr-2">
+      <!-- User Login Door -->
+      <a
+        type="button"
+        class="navbar-link order-lg-2 mr-2"
+        data-toggle="modal"
+        data-target="#loginModal"
+      >
         <i class="fas fa-user-circle align-middle"></i>
         <span class="align-middle">Log In</span>
       </a>
@@ -63,39 +69,84 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navbar -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto mr-3">
-          <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active"><span>Home</span></a>
+          </li>
           <li class="nav-item">
             <a href="./pages/all-products.html" class="nav-link"
-              >All Products</a
+              ><span>All Products</span></a
             >
           </li>
           <li class="nav-item">
-            <a href="./pages/drones.html" class="nav-link">Drones</a>
+            <a href="./pages/drones.html" class="nav-link"
+              ><span>Drones</span></a
+            >
           </li>
           <li class="nav-item">
-            <a href="./pages/cameras.html" class="nav-link">Cameras</a>
+            <a href="./pages/cameras.html" class="nav-link"
+              ><span>Cameras</span></a
+            >
           </li>
           <li class="nav-item">
-            <a href="./pages/accessories.html" class="nav-link">Accessories</a>
+            <a href="./pages/accessories.html" class="nav-link"
+              ><span>Accessories</span></a
+            >
           </li>
           <li class="nav-item">
-            <a href="./pages/sale.html" class="nav-link">Sale</a>
+            <a href="./pages/sale.html" class="nav-link"><span>Sale</span></a>
           </li>
           <li class="nav-item">
-            <a href="./pages/about.html" class="nav-link">About</a>
+            <a href="./pages/about.html" class="nav-link"><span>About</span></a>
           </li>
           <li class="nav-item">
-            <a href="./pages/contact.html" class="nav-link">Contact</a>
+            <a href="./pages/contact.html" class="nav-link"
+              ><span>Contact</span></a
+            >
           </li>
         </ul>
       </div>
     </nav>
+    <!-- Navbar End -->
 
     <div class="container-fluid p-0">
-      <!-- Cover Section -->
+      <!-- User Login Modal Start -->
+      <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content bg-yellow border-0">
+            <div class="modal-body text-dark">
+              <h2 class="text-center">Log In</h2>
+
+              <form action="">
+                <div class="form-group">
+                  <label for="">Email</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="form-group">
+                  <label for="">Password</label>
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="">Remember me</label>
+                </div>
+
+                <button class="btn btn-block my-btn-secondary">
+                  Login
+                </button>
+              </form>
+              <p class="text-center mt-4">
+                Don't have an account
+                <a href="./pages/signup.html">Create an account</a> Now!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- User Login Modal End -->
+
+      <!-- Main Cover Section Start -->
       <div class="row m-0">
         <div class="col p-0">
           <div class="card front-section border-0">
@@ -120,8 +171,9 @@
           </div>
         </div>
       </div>
+      <!-- Main Cover Section End -->
 
-      <!-- Section  -->
+      <!-- Small Cover Sections Start  -->
       <div class="row m-0" id="section2">
         <div class="col-md-6 p-0">
           <div class="card border-0 rounded-0">
@@ -164,7 +216,9 @@
           </div>
         </div>
       </div>
+      <!-- Small Cover Sections End  -->
 
+      <!-- Best Seller Products Slider Start -->
       <div class="row m-0">
         <div class="col p-0">
           <div class="card border-0 rounded-0">
@@ -174,189 +228,247 @@
                 id="bestSellerItems"
                 class="owl-carousel items-carousel pl-4 pr-4"
               >
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-1.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-1.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-2.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-2.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-3.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-3.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-4.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-4.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-5.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-5.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-6.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-6.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-7.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-7.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-8.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                  </div>
+                </div>
+                <!-- <div class="item card">
                   <img
                     src="./images/drone-item-8.jpg"
                     alt=""
@@ -381,7 +493,7 @@
                       Add to Cart
                     </button>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div id="bestSellerItemsPrev" class="carousel-nav carousel-prev">
                 <i class="fas fa-angle-left"></i>
@@ -393,7 +505,9 @@
           </div>
         </div>
       </div>
+      <!-- Best Seller Products Slider End -->
 
+      <!-- New Arrivals Products Slider Start -->
       <div class="row m-0">
         <div class="col p-0">
           <div class="card border-0 rounded-0">
@@ -403,211 +517,243 @@
                 id="newArrivalItems"
                 class="owl-carousel items-carousel pl-4 pr-4"
               >
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-1.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-1.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-2.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-2.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-3.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-3.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-4.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-4.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-5.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-5.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-6.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-6.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-7.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-7.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
-                <div class="item card">
-                  <img
-                    src="./images/drone-item-8.jpg"
-                    alt=""
-                    class="card-img-top"
-                  />
-                  <div class="card-body">
-                    <h4>I am a product</h4>
-                    <h5>$ 200</h5>
-                    <span class="d-block">
+                <div class="item card border-0 shadow">
+                  <div class="card-header p-0 border-0 bg-none">
+                    <img
+                      src="../images/drone-item-8.jpg"
+                      alt=""
+                      class="card-img-top"
+                    />
+                    <div class="preview-trigger-container">
+                      <a href="#"><i class="fas fa-camera"></i></a>
+                    </div>
+                  </div>
+
+                  <div class="card-body text-center">
+                    <h5>I am a product</h5>
+                    <small class="text-muted">Quick Description</small>
+                    <h4 class="display-4 item-price">$ 60</h4>
+                    <div>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
-                      <i class="fas fa-star-half-alt"></i><br />
-                      <i>Reviews</i>
-                    </span>
-                    <button
-                      type="button"
-                      class="btn btn-block my-btn-primary mt-3"
-                    >
-                      <i class="fas fa-cart-plus"></i>
-                      Add to Cart
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="card-footer p-0 border-0 bg-none">
+                    <button class="btn btn-block my-btn-primary rounded-0">
+                      <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                   </div>
                 </div>
@@ -622,7 +768,9 @@
           </div>
         </div>
       </div>
+      <!-- New Arrival Products Slider End -->
 
+      <!-- Brands Slider Start -->
       <div class="row m-0">
         <div class="col p-3">
           <div class="card border-0">
@@ -665,9 +813,11 @@
           </div>
         </div>
       </div>
+      <!-- Brands Slider End -->
 
-      <div class="row m-0 bg-primary">
-        <div class="col my-secondary-bg">
+      <!-- Testimonial Start -->
+      <div class="row m-0 testimonial-wrap">
+        <div class="col">
           <div class="card bg-none border-0">
             <div class="card-body">
               <h2 class="text-center text-light">Testimonial</h2>
@@ -767,17 +917,27 @@
           </div>
         </div>
       </div>
+      <!-- Testimonial End -->
 
-      <!-- Footer -->
+      <!-- Footer Start -->
       <div class="row m-0 footer-nav bg-gray">
-        <div class="col-12 col-md-6 col-lg-3 order-2 order-md-1">
-          <div class="card border-0 bg-none text-yellow">
+        <div
+          class="col-12 col-md-4 col-lg-4 order-2 order-md-1 text-center text-lg-left p-0"
+        >
+          <div class="card border-0 bg-none">
             <div class="card-body">
-              <h3>Lens Queen</h3>
+              <h3 class="text-yellow">Lens Queen</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Corrupti cupiditate, minima excepturi explicabo quod itaque
+                commodi amet repellat eos consectetur dicta.
+              </p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2 order-md-2">
+        <div
+          class="col-12 col-md-4 col-lg-2 order-md-2 text-center text-lg-left p-0"
+        >
           <div class="card border-0 bg-none text-yellow">
             <div class="card-body">
               <h5>Shop</h5>
@@ -800,7 +960,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2 order-md-3">
+        <div
+          class="col-12 col-md-4 col-lg-2 order-md-3 text-center text-lg-left p-0"
+        >
           <div class="card border-0 bg-none text-yellow">
             <div class="card-body">
               <h5>Info</h5>
@@ -816,7 +978,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-2 order-md-3">
+        <div
+          class="col-12 col-md-6 col-lg-2 order-md-4 text-center text-lg-left p-0"
+        >
           <div class="card border-0 bg-none text-yellow">
             <div class="card-body">
               <h5>Support</h5>
@@ -838,7 +1002,9 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3 order-md-4">
+        <div
+          class="col-12 col-md-6 col-lg-2 order-md-5 text-center text-lg-left p-0"
+        >
           <div class="card border-0 bg-none text-yellow">
             <div class="card-body">
               <h5>Contact</h5>
@@ -868,7 +1034,9 @@
           </div>
         </div>
       </div>
+      <!-- Footer End -->
 
+      <!-- Copyright Start -->
       <div class="row m-0">
         <div class="col bg-yellow">
           <div class="card bg-none border-0 text-center">
@@ -884,6 +1052,7 @@
           </div>
         </div>
       </div>
+      <!-- Copyright End -->
     </div>
 
     <!-- jQuery -->
