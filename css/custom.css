@@ -169,8 +169,8 @@ html {
 
 .front-section {
   height: 92vh !important;
-  background-image: url("../images/drone.jpg");
-  background-position: center;
+  background: url("../images/drone.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .slide-down-arrow {
