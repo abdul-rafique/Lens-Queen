@@ -4,24 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <base href="/" />
 
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css" />
-
     <!-- Owl Carousel -->
-    <link rel="stylesheet" href="../css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="../css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="../css/owl.carousel.min.css" type="text/css" />
+    <link href="../css/owl.theme.default.min.css" type="text/css" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/custom.css" />
+
     <!-- Animate CSS -->
     <link rel="stylesheet" href="../css/animate.css" />
+
     <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/8ce2b457e0.js"
@@ -35,18 +37,12 @@
       <a href="#" class="navbar-brand font-weight-bold mr-auto">Lens Queen</a>
 
       <!-- Shopping Cart -->
-      <div class="dropdown order-lg-2 mr-3">
-        <a href="#" class="navbar-link" data-toggle="dropdown">
-          <i class="fas fa-shopping-cart align-middle">
-            <span class="my-badge">0</span>
-          </i>
-          <span class="align-middle">Cart</span>
-        </a>
-
-        <div class="dropdown-menu dropdown-menu-lg-right">
-          <span class="dropdown-item">Item</span>
-        </div>
-      </div>
+      <a href="#" class="navbar-link order-lg-2 mr-3">
+        <i class="fas fa-shopping-cart align-middle">
+          <span class="my-badge">0</span>
+        </i>
+        <span class="align-middle">Cart</span>
+      </a>
 
       <!-- User Login -->
       <a href="#" class="navbar-link order-lg-2 mr-2">
@@ -98,12 +94,14 @@
     <!-- Navbar End -->
 
     <div class="container-fluid p-0">
+      <!-- Page Cover Title Start -->
       <div class="jumbotron pg-cover-title m-0 rounded-0 p-4">
         <h1 class="text-center text-light display-3">
           ALL PRODUCTS
         </h1>
       </div>
-
+      <!-- Page Cover Title End -->
+      <!-- Items Filter For Small Devices Start -->
       <div class="row m-0 d-block d-lg-none">
         <div class="col">
           <div class="card border-0">
@@ -183,12 +181,15 @@
           </div>
         </div>
       </div>
+      <!-- Items Filter For Small Devices End -->
+
       <div class="row m-0">
+        <!-- Items Filter For > Small Devices Devices Start -->
         <div class="col-lg-3 filter-section d-none d-lg-block">
           <h3 class="mt-3">Filter by</h3>
           <hr />
 
-          <div class="accordion" id="filterAccordion">
+          <div class="accordion mb-3" id="filterAccordion">
             <div class="card border-0">
               <div class="card-header p-1">
                 <button
@@ -206,27 +207,40 @@
                 data-parent="#filterAccordion"
               >
                 <div class="card-body">
-                  <ul class="navbar-nav">
+                  <ul class="navbar-nav filters">
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-filter="all">All</a>
+                      <a
+                        href="#"
+                        class="nav-link d-inline active"
+                        data-filter="all"
+                        >All</a
+                      >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-filter="drones"
+                      <a href="#" class="nav-link d-inline" data-filter="drones"
                         >Drones</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-filter="cameras"
+                      <a
+                        href="#"
+                        class="nav-link d-inline"
+                        data-filter="cameras"
                         >Cameras</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-filter="accessories"
+                      <a
+                        href="#"
+                        class="nav-link d-inline"
+                        data-filter="accessories"
                         >Accessories</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link" data-filter="sale">Sale</a>
+                      <a href="#" class="nav-link d-inline" data-filter="sale"
+                        >Sale</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -282,25 +296,25 @@
                       <a href="#" class="nav-link">Sony</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Parrot</a>
+                      <a href="#" class="nav-link d-inline">Parrot</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Cannon</a>
+                      <a href="#" class="nav-link d-inline">Cannon</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">EHANG</a>
+                      <a href="#" class="nav-link d-inline">EHANG</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Yuneec</a>
+                      <a href="#" class="nav-link d-inline">Yuneec</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Nikon</a>
+                      <a href="#" class="nav-link d-inline">Nikon</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">DJI</a>
+                      <a href="#" class="nav-link d-inline">DJI</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Panasonic</a>
+                      <a href="#" class="nav-link d-inline">Panasonic</a>
                     </li>
                   </ul>
                 </div>
@@ -308,10 +322,15 @@
             </div>
           </div>
         </div>
+        <!-- Items Filter For > Small Devices Devices End -->
 
+        <!-- Products Section Start -->
         <div class="col-12 col-lg-9 products-section">
-          <div class="card-columns mt-3 mt-lg-5 pt-lg-3 px-0">
-            <div class="card mb-4 border-0 shadow">
+          <div class="card-columns mt-3 mt-lg-5 pt-lg-3 px-0 filter-items">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="accessories"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-1.jpg"
@@ -342,7 +361,10 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="cameras"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-2.jpg"
@@ -373,7 +395,10 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="drones"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-3.jpg"
@@ -404,7 +429,10 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="drones"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-4.jpg"
@@ -435,7 +463,10 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="accessories"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-5.jpg"
@@ -466,7 +497,7 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div class="card mb-4 border-0 shadow is-animated" data-name="sale">
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-6.jpg"
@@ -497,7 +528,10 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div
+              class="card mb-4 border-0 shadow is-animated"
+              data-name="cameras"
+            >
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-7.jpg"
@@ -528,7 +562,7 @@
               </div>
             </div>
 
-            <div class="card mb-4 border-0 shadow">
+            <div class="card mb-4 border-0 shadow is-animated" data-name="sale">
               <div class="card-header p-0 border-0 bg-none">
                 <img
                   src="../images/drone-item-8.jpg"
@@ -560,9 +594,10 @@
             </div>
           </div>
         </div>
+        <!-- Products Section End -->
       </div>
 
-      <!-- Footer -->
+      <!-- Footer Start -->
       <div class="row m-0 footer-nav bg-gray">
         <div
           class="col-12 col-md-4 col-lg-4 order-2 order-md-1 text-center text-lg-left p-0"
@@ -677,7 +712,9 @@
           </div>
         </div>
       </div>
+      <!-- Footer End -->
 
+      <!-- Credit and Copyright Bar Start -->
       <div class="row m-0">
         <div class="col bg-yellow">
           <div class="card bg-none border-0 text-center">
@@ -693,26 +730,26 @@
           </div>
         </div>
       </div>
+      <!-- Credit and Copyright Bar End -->
     </div>
 
     <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
+    <script src="../js/jquery-3.5.0.min.js"></script>
+
     <!-- Popper.js -->
     <script
       src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
       integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
+
     <!-- Bootstrap JS -->
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+
     <!-- Owl Carousel JS -->
     <script src="../js/owl.carousel.min.js"></script>
 
@@ -746,19 +783,19 @@
       var bestSellerItemsCarousel = $("#bestSellerItems");
       var newArrivalItemsCarousel = $("#newArrivalItems");
 
-      $("#bestSellerItemsPrev").click(function () {
+      $("#bestSellerItemsPrev").on("click", function () {
         bestSellerItemsCarousel.trigger("prev.owl.carousel");
       });
 
-      $("#bestSellerItemsNext").click(function () {
+      $("#bestSellerItemsNext").on("click", function () {
         bestSellerItemsCarousel.trigger("next.owl.carousel");
       });
 
-      $("#newArrivalItemsPrev").click(function () {
+      $("#newArrivalItemsPrev").on("click", function () {
         newArrivalItemsCarousel.trigger("prev.owl.carousel");
       });
 
-      $("#newArrivalItemsNext").click(function () {
+      $("#newArrivalItemsNext").on("click", function () {
         newArrivalItemsCarousel.trigger("next.owl.carousel");
       });
 
@@ -814,11 +851,11 @@
         },
       });
 
-      $("#testimonialPrev").click(function () {
+      $("#testimonialPrev").on("click", function () {
         testimonial.trigger("prev.owl.carousel");
       });
 
-      $("#testimonialNext").click(function () {
+      $("#testimonialNext").on("click", function () {
         testimonial.trigger("next.owl.carousel");
       });
 
@@ -876,5 +913,7 @@
         showPrice2.innerHTML = "$" + priceSlider2.value;
       };
     </script>
+    <!-- <script src="../js/isotope.jquery.filter.min.js"></script> -->
+    <script src="../js/products-filters.js"></script>
   </body>
 </html>

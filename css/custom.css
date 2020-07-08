@@ -374,6 +374,19 @@ html {
   background: #ffa21f !important;
 }
 
+.is-animated {
+  animation: 0.6s zoom-in;
+}
+
+@keyframes zoom-in {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .products-section .card-columns .card .card-header,
 .items-carousel .card .card-header {
   position: relative !important;
